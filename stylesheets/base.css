@@ -1,19 +1,29 @@
 @import url('http://fonts.googleapis.com/css?family=Raleway:400,500');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400italic');
-/* Blue #0f72b3 */
+/* Blue #3594E7 */
 /* Red #d85565 */
-html {
-  background-color: #333;
-  text-align: center;
-  font-family: 'Lora', serif;
-  padding-bottom: 100px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+#map {
+  height: 100%;
+}
+
+.header {
+  z-index: 100;
+}
+
 h1{
   font-family: "Raleway", sans-serif;
-  font-size: 2.2em;
-  color: #0f72b3;
+  font-size: 1.2em;
+  color: #3594E7;
   font-weight: 500;
   font-style: normal;
+  text-align:center;
 }
 
 h3 {
@@ -151,12 +161,6 @@ hr {
   background-color: #cdb44a;
   height:2px;
   width: 80%;
-}
-body {
-  font-size: 1em;
-  font-family: "Lora", serif;
-  color: #ddd;
-  margin: 80px;
 }
 p {
   font-style:normal;

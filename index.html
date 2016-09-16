@@ -1,11 +1,94 @@
-<!doctype html>
-<head>
-	<link rel="stylesheet" href="stylesheets/base.css">
-</head>
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bean Town Ice Cream</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+  </head>
+  <body>
+  	<div class="header"><h1>Bean Town Ice Cream</h1></div>
+    <div id="map"></div>
 
-<h1> Bean Town Ice Cream </h1>
-<p> Investigation into ice cream here in the bean barn </p>
+    <script>
+      function initMap() {
 
-</body>
+      	var jp_licks_pos = {lat:42.3969627,lng:-71.1245129};
+      	var toscis_pos = {lat:42.3635755,lng:-71.1015187};
+      	var tipping_cow_pos = {lat:42.3915778,lng:-71.1016129};
+      	var berryline_pos = {lat:42.3820055,lng:-71.119961};
+      	var emack_pos = {lat:42.3819629,lng:-71.1199611};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.385263, lng: -71.108105},
+          zoom: 13,
+          styles: [
+            {
+              featureType: 'all',
+              stylers: [
+                { saturation: -80 }
+              ]
+            },{
+              featureType: 'road.arterial',
+              elementType: 'geometry',
+              stylers: [
+                { hue: '#3778d2' },
+                { saturation: 90 }
+              ]
+            },{
+              featureType: 'poi.business',
+              elementType: 'labels',
+              stylers: [
+                { visibility: 'off' }
+              ]
+            }
+          ]
+        });
+
+        var icream = 'https://static1.squarespace.com/static/544a60fde4b0c5079a9af101/t/57db46668419c224b3bd956c/1473988198703/icream.png?format=100w';
+
+
+        var jp_licks = new google.maps.Marker({
+          position: jp_licks_pos,
+          map: map,
+          title: 'JP Licks',
+          icon: icream
+        });
+
+        var toscis = new google.maps.Marker({
+          position: toscis_pos,
+          map: map,
+          title: 'Toscanini\'s',
+          icon: icream
+        });
+
+        var tipping_cow = new google.maps.Marker({
+          position: tipping_cow_pos,
+          map: map,
+          title: 'Tipping Cow',
+          icon: icream
+        });
+
+        var berryline = new google.maps.Marker({
+          position: berryline_pos,
+          map: map,
+          title: 'Berryline',
+          icon: icream
+        });
+
+        var emack = new google.maps.Marker({
+          position: emack_pos,
+          map: map,
+          title: 'Emack and Bolio\'s',
+          icon: icream
+        });
+
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9FeZxUj2n25O5aCZSyh2nDfh9cMx9GEs&callback=initMap"
+    async defer></script>
+  </body>
 </html>
+
+
